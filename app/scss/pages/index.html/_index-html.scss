@@ -1,0 +1,221 @@
+.index-main {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    @include background-image("../assets/home/background-home-desktop.jpg");
+ 
+    @include max-width(tablet) {
+        @include background-image("../assets/home/background-home-tablet.jpg");
+        overflow-y: auto;
+    }
+
+    @include max-width(mobile) {
+        @include background-image("../assets/home/background-home-mobile.jpg");
+    }
+
+
+    .space {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        &__container {
+
+            
+            @include max-width(tablet) {
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+            }
+        }
+
+        &__contents {
+            opacity: 0;
+            margin-left: 10.3125rem;
+            width: 450px;
+            height: 382px;
+            color: $white;
+            animation: contents $anim-800ms ease $anim-400ms forwards;
+
+            @keyframes contents {
+                from {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                1% {
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @include max-width(desktop) {
+                margin-left: 6rem;
+            }
+
+            @include max-width(laptop) {
+                margin-left: 4rem;
+            }
+               
+            @include max-width(tablet) {
+                height: auto;
+                width: auto;
+                margin-left: 0;
+                text-align: center;
+                margin-top: 6.8125rem;
+                margin-bottom: 10.25rem;
+            }
+
+            @include max-width(mobile) {
+                margin-top: 0;
+                margin-bottom: 1rem;
+                width: 327px;
+                height: 276px;
+            }
+
+            > .space-subtitle {                
+
+                h3 {
+                    font-family: $font-fm-barlowCondensed;
+                    font-size: $font-m;
+                    letter-spacing: 4.72px;
+                    text-transform: uppercase;
+                    color: $light-blue;
+
+                    @include max-width(tablet) {
+                        font-size: $font-xxn;
+                    }
+
+                    @include max-width(mobile) {
+                        font-size: $font-n;
+                    }
+                }
+            }
+
+            > .space-title {
+                width: 445px;
+
+                @include max-width(mobile) {
+                    width: 327px;
+                }
+
+                h1 {
+                    font-family: $font-fm-bellefair;
+                    font-size: $font-xl;
+                    font-weight: 400;
+                    text-transform: uppercase;
+
+                    @include max-width(mobile) {
+                        font-size: 5rem;
+                    }
+                }
+            }
+
+            > .space-content {
+                width: 444px;
+
+                @include max-width(mobile) {
+                    width: 327px;
+                    margin: 0 auto;
+                }
+
+                p {
+                    font-size: $font-xn;
+                    font-weight: 400;
+                    line-height: 32px;
+                    color: $light-blue;
+
+                    @include max-width(tablet) {
+                        font-size: $font-n;
+                    }
+
+                    @include max-width(mobile) {
+                        font-size: 0.9375rem;
+                        line-height: 25px;
+                    }
+                }
+            }
+
+        }
+
+        &__explore {
+            opacity: 0;
+            background: $white;
+            width: 274px;
+            height: 274px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            margin-right: 10.3125rem;
+            position: relative;
+            font-size: $font-xm;
+            font-family: $font-fm-bellefair;
+            font-weight: 400;
+            color: $dark-bg;
+            letter-spacing: 2px;
+            animation: circle $anim-800ms ease $anim-400ms forwards;
+
+            @keyframes circle {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                1% {
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @include max-width(desktop) {
+                margin-right: 6rem;
+            }
+
+            @include max-width(laptop) {
+                margin-right: 4rem;
+            }
+
+            @include max-width(tablet) {
+                width: 242px;
+                height: 242px;
+                margin-right: 0;
+                position: absolute;
+                bottom: 15px;
+            }
+
+            @include max-width(mobile) {
+                position: static;
+                bottom: 0;
+                width: 150px;
+                height: 150px;
+                font-size: $font-xxn;
+            }
+
+            > .explore-hover {
+                position: absolute;
+                width: 450px;
+                height: 450px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                background: $white;
+                opacity: 0;
+                transition: all 0.5s ease;
+
+                @include max-width(tablet) {
+                    position: static;
+                    display: none;
+                }
+
+                &.hover {
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+}
+

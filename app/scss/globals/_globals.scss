@@ -1,0 +1,107 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 100%;
+    font-family: $font-fm-barlow;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a, a::before, a::after {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h4 {
+    font-family: $font-fm-barlow;
+    font-weight: 400;
+}
+  
+//flexbox
+.flex {
+    display: flex;
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-fd-c {
+        flex-direction: column;
+    }
+}   
+
+//hide when reach certain breakpoint
+//desktop first
+.hide-for-mobile {
+    @include max-width(mobile) {
+        display: none;
+    }
+}
+
+.hide-for-tablets {
+    @include max-width(tablet) {
+        display: none;
+    }
+}
+
+.hide-for-laptops {
+    @include max-width(laptop) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include max-width(desktop) {
+        display: none;
+    }
+}
+
+//mobile first
+.hide-for-mobile-mf {
+    @include min-width(mobile) {
+        display: none;
+    }
+}
+
+.hide-for-tablets-mf {
+    @include min-width(tablet) {
+        display: none;
+    }
+}
+
+.hide-for-laptops-mf {
+    @include min-width(laptop) {
+        display: none;
+    }
+}
+
+.hide-for-desktop-mf {
+    @include min-width(desktop) {
+        display: none;
+    }
+}
+
+//show
+.show-for-mobile-mf {
+    @include max-width(mobile) {
+        display: inline-block;
+    }
+}
+
+
+

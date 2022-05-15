@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../dist/styles.css">
+  <script type="module" src="./app/js/index.js" defer></script>
+</head>
+<body>
+
+  <div class="preloader" id="preloader">
+    <img src="./assets/preloader/space-gif-space.gif" class="page-main-preloader" id="page-main-preloader" alt="Space preloader">
+  </div>
+
+  <div class="destination-main">
+    <header class="header">
+      <div class="header__container flex flex-ai-c flex-jc-sb">
+        <div class="header__logo">
+          <a href="./index.html"><img src="./assets/shared/logo.svg" alt="Logo" class="header-image"></a>
+        </div>
+        <div class="header__line hide-for-tablets"></div> 
+        <nav class="header__nav flex" id="header__nav">
+          <img src="./assets/shared/icon-close.svg" alt="Close icon" class="close-nav hide-for-mobile-mf" id="close-nav-btn">
+          <ul class="header-links flex flex-ai-c" id="header-links">
+              <li><a href="./index.html"><span class="hide-for-tablets show-for-mobile-mf">00</span> HOME</a><div class="hover-line"></div></li>
+              <li><a href="./destination-moon.html"><span class="hide-for-tablets show-for-mobile-mf">01</span> DESTINATION</a><div class="active-line hover-line hide-for-mobile"></div></li>
+              <li><a href="./crew-commander.html"><span class="hide-for-tablets show-for-mobile-mf">02</span> CREW </a><div class="hover-line"></div></li>
+              <li><a href="./technology-vehicle.html"><span class="hide-for-tablets show-for-mobile-mf">03</span> TECHNOLOGY </span></a><div class="hover-line"></div></li>
+          </ul>
+        </nav>
+        <div class="header__hamburger hide-for-mobile-mf">
+          <img src="./assets/shared/icon-hamburger.svg" alt="Hamburger icon" class="hambuger-icon" id="hamburger-btn">
+        </div>
+      </div>
+    </header> 
+
+    <div class="destination-pick">
+      <div class="destination-text">
+        <h2><span>01</span> Pick your destination</h2>
+      </div>
+    </div>
+
+    <main class="destination-titan destination flex flex-ai-c">
+      <section class="destination__container flex flex-ai-c">  
+        <div class="destination__image">
+          <img src="./assets/destination/image-titan.png" alt="Europa">
+        </div>
+        <div class="destination__contents">
+          <div class="destination-nav">
+            <ul class="flex flex-jc-sb flex-ai-c">
+              <li><a href="./destination-moon.html" class="active">Moon</a><span class="hover-line"></span></li>
+              <li><a href="./destination-mars.html">Mars</a><span class="hover-line"></span></li>
+              <li><a href="./destination-europa.html">Europa</a><span class="hover-line"></span></li>
+              <li><a href="./destination-titan.html">Titan</a><span class="active hover-line"></span></li>
+            </ul>
+          </div>
+          <div class="destination-description">
+            <h2>TITAN</h2>
+            <p class="destination-text">
+              The only moon known to have a dense atmosphere other than Earth, Titan 
+              is a home away from home (just a few hundred degrees colder!). As a 
+              bonus, you get striking views of the Rings of Saturn.
+            </p>
+          </div>
+          <div class="destination-line"></div>
+          <div class="destination-distance flex flex-ai-c">
+              <div class="des-distance">
+                <p>Avg. distance</p>
+                <h4>1.6 bil. km</h4>
+              </div>
+              <div class="des-time">
+                <p>Est. travel time</p>
+                <h4>7 years</h4>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+  
+</body>
+</html>

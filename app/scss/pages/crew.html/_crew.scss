@@ -1,0 +1,468 @@
+.crew-main {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    @include background-image("../assets/crew/background-crew-desktop.jpg");
+
+    
+
+    @include max-width(tablet) {
+        @include background-image("../assets/crew/background-crew-tablet.jpg");
+        overflow-y: auto;
+    }
+
+    @include max-width(mobile) {
+        @include background-image("../assets/crew/background-crew-mobile.jpg");
+    }
+
+    .crew-pick {
+        position: relative; 
+        top: 98px;
+        opacity: 0;
+        animation: pick $anim-800ms ease $anim-400ms forwards;
+
+        @keyframes pick {
+            from {
+                transform: translateY(-200%);
+                opacity: 0;
+            }
+            1% {
+                opacity: 1;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @include max-width(laptop) {
+            top: 36px;
+        }
+
+        @include max-width(mobile) {
+            top: 24px;
+        }
+
+        > .crew-text { 
+            height: 34px;
+            width: 382px;
+            margin-left: 7.5rem;
+
+            @include max-width(laptop) {
+                width: 272px;
+                height: 24px;
+                margin-left: 2.4375rem;
+            }
+
+            @include max-width(mobile) {
+                width: 221px;
+                height: 19px;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            span {
+                font-family: $font-fm-barlowCondensed;
+                font-size: $font-m;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 34px;   
+                letter-spacing: 4.725px;
+                text-align: left;
+                color: $white;
+                mix-blend-mode: normal;
+                opacity: 0.25;
+                margin-right: 0.9375rem;
+
+                @include max-width(laptop) {
+                    font-size: $font-xxn;
+                    line-height: 24px;
+                    letter-spacing: 3.375px;
+                }
+            }
+
+            h2 {
+                height: 34px;                
+                font-family: $font-fm-barlowCondensed;
+                font-style: normal;
+                font-weight: 400;
+                font-size: $font-m;
+                line-height: 34px;                
+                letter-spacing: 4.725px;
+                text-transform: uppercase;
+                color: $white;
+
+                @include max-width(laptop) {
+                    font-size: $font-xxn;
+                    line-height: 24px;
+                    letter-spacing: 3.375px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .crew {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+
+        @include max-width(tablet) {
+            height: auto;
+            flex-direction: column;
+        }
+
+
+        &__container {
+            width: 100%;
+            justify-content: space-around;
+
+            @media(max-width: 1300px) {
+                width: 85%;
+                margin: 0 auto;
+            }
+
+            @include max-width(desktop) {
+                width: 90%;
+            }
+
+            @include max-width(laptop) {
+                width: 95%;
+            }
+
+            @include max-width(tablet) {
+                width: 100%;
+                flex-direction: column;
+                margin-top: 5rem;
+            }
+
+            @include max-width(mobile) {
+                margin-top: 3.5rem;
+            }
+        }
+
+        &__contents {
+            margin-left: 7.5rem;
+            width: 100%;
+            min-height: 400px;
+            opacity: 0;
+            animation: crew-contents $anim-800ms ease $anim-400ms forwards;
+            
+            @keyframes crew-contents {
+                from {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+                1% {
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @media(max-width: 1300px) {
+                width: 47.6%;
+            }
+
+            @include max-width(desktop) {
+                margin-left: 1rem;
+            }
+
+            @include max-width(laptop) {
+                margin-left: 0;
+            }
+
+            @include max-width(tablet) {
+                margin-left: 0;
+                width: 600px;
+                min-height: 232px;
+                margin-bottom: 2.5rem;
+            }
+
+            @include max-width(mobile) {
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 327px;
+                min-height: 280px;
+            }
+
+            > .crew-role {
+                width: 314px;
+                height: 37px;
+
+                @media(max-width: 1300px) {
+                    width: 100%;
+                }
+
+                @include max-width(tablet) {
+                    width: 100%;     
+                    height: auto; 
+                    text-align: center;
+                }
+
+                @include max-width(mobile) {
+                    order: 2;
+                    width: 155px;
+                    height: 18px;
+                }
+
+                h3 {
+                    font-family: $font-fm-bellefair;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: $font-xm;
+                    line-height: 37px;
+                    text-transform: uppercase;
+                    color: $white;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+
+                    @media(max-width: 1050px) {
+                        font-size: $font-m;
+                    }
+
+                    @include max-width(laptop) {
+                        font-size: $font-xxn;
+                    }
+
+                    @include max-width(tablet) {
+                        font-size: 1.5rem;
+                        line-height: 28px;
+                        
+                    }
+
+                    @include max-width(mobile) {
+                        font-size: $font-n;
+                    }
+    
+                }
+            }
+
+            > .crew-name {
+                width: 688px;
+                height: 64px;
+                margin: 25px 0;
+                
+                @include max-width(desktop) {
+                    width: 640px;
+                }
+
+                @include max-width(tablet) {
+                    width: 100%;
+                    height: 46px;
+                    margin: 8px 0 15px 0;
+                    text-align: center;
+                }
+
+                @include max-width(mobile) {
+                    order: 3;
+                    margin-bottom: 0;
+                }
+
+                h2 {
+                    font-family: $font-fm-bellefair;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 3.5rem;
+                    color: $white;
+                    line-height: 64px;
+                    text-transform: uppercase;
+
+                    @media(max-width: 1050px) {
+                        font-size: 3rem;
+                    }
+
+                    @include max-width(laptop) {
+                        font-size: 2.5rem;
+                    }
+
+                    @include max-width(tablet) {
+                        font-size: 2.5rem;
+                        line-height: 46px;
+                    }
+
+                    @include max-width(mobile) {
+                        font-size: 1.5rem;
+                        line-height: 28px;
+                    }
+    
+                }
+            }
+
+            > .crew-information {
+                width: 444px;
+                height: 128px;
+
+                @media(max-width: 850px) {
+                    width: 400px;   
+                }
+
+                @include max-width(tablet) {
+                    width: 100%;   
+                    text-align: center;
+                }
+
+                @include max-width(mobile) {
+                    order: 4;
+                    width: 327px;
+                    height: 125px;
+                }
+
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: $font-xn;
+                    color: $light-blue;
+                    line-height: 32px;
+
+                    @include max-width(laptop) {
+                        font-size: $font-n;
+                    }
+
+                    @include max-width(tablet) {
+                        font-size: $font-n;
+                    }
+
+                    @include max-width(mobile) {
+                        font-size: 1.066rem;
+                        line-height: 25px;
+                        margin: 0;
+                    }    
+                }
+            }
+
+            > .crew-navigations {
+                position: absolute;
+                bottom: 85px;
+
+                @include max-width(tablet) {
+                    position: static;
+                    width: 100%;
+                    justify-content: center;
+
+                }
+
+                @include max-width(mobile) {
+                    order: 1;
+                    width: 88px;
+                    height: 10px;
+                    margin-bottom: 1.875rem;
+                }
+
+                > .crew-circle {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background: $white;   
+                    display: inline-block;
+                    margin-right: 22px;
+                    opacity: 0.17;
+                    transition: opacity 300ms ease;
+                    cursor: pointer;
+
+                    @include max-width(mobile) {
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 0.375rem;
+                    }
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+
+                > .crew-circle.active {
+                    opacity: 1;
+                }
+
+            }
+        }
+
+        &__image {
+            margin-right: 7.5rem;
+            opacity: 0;
+            animation: crew-image $anim-800ms ease $anim-400ms forwards;
+
+            @keyframes crew-image {
+                from {
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
+                1% {
+                    opacity: 1;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            @media(max-width: 1300px) {
+                margin-right: 0;
+            }
+
+            
+            @include max-width(tablet) {
+                position: relative;
+                bottom: 0;
+                margin: 0;
+              
+            }
+
+            @include max-width(mobile) {
+                order: 1;   
+                width: 327px;
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px rgb(123, 123, 123) solid;
+                margin-bottom: 1.875rem;
+            }
+
+            img {
+                width: 568.07px;
+                height: 712px;
+                object-fit: contain;
+
+                @media(min-height: 800px) {
+                    height: 100%;
+                }
+
+                @include max-width(laptop) {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                @include max-width(tablet) {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include max-width(mobile) {
+                    height: 222px;
+    
+                    &.commander-img {
+                        width: 177.12px;
+                    }
+
+                    &.specialist-img {
+                        width: 153.92px;
+                    }
+
+                    &.pilot-img {
+                        width: 180.73px;
+                    }
+
+                    &.engr-img {
+                        width: 226.15px;
+                        height: 223px;
+                    }
+                }
+            }
+        }
+    }
+}

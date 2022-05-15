@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Space tourism website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/styles.css">
+  <script type="module" src="./app/js/index.js" defer></script>
+  <script src="./app/js/home.js" defer></script>
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <img src="./assets/preloader/space-gif-space.gif" class="page-main-preloader" id="page-main-preloader" alt="Space preloader">
+  </div>
+
+  <div class="index-main">
+    <header class="header">
+      <div class="header__container flex flex-ai-c flex-jc-sb">
+        <div class="header__logo">
+          <a href="./index.html"><img src="./assets/shared/logo.svg" alt="Logo" class="header-image"></a>
+        </div>
+        <div class="header__line hide-for-tablets"></div> 
+        <nav class="header__nav flex" id="header__nav">
+          <img src="./assets/shared/icon-close.svg" alt="Close icon" class="close-nav hide-for-mobile-mf" id="close-nav-btn">
+          <ul class="header-links flex flex-ai-c" id="header-links">
+              <li><a href="./index.html"><span class="hide-for-tablets show-for-mobile-mf">00</span> HOME</a><div class="active-line hover-line hide-for-mobile"></div></li>
+              <li><a href="./destination-moon.html"><span class="hide-for-tablets show-for-mobile-mf">01</span> DESTINATION</a><div class="hover-line"></div></li>
+              <li><a href="./crew-commander.html"><span class="hide-for-tablets show-for-mobile-mf">02</span> CREW </a><div class="hover-line"></div></li>
+              <li><a href="./technology-vehicle.html"><span class="hide-for-tablets show-for-mobile-mf">03</span> TECHNOLOGY </span></a><div class="hover-line"></div></li>
+          </ul>
+        </nav>
+        <div class="header__hamburger hide-for-mobile-mf">
+          <img src="./assets/shared/icon-hamburger.svg" alt="Hamburger icon" class="hambuger-icon" id="hamburger-btn">
+        </div>
+      </div>
+    </header> 
+
+
+    <main class="index-space space flex flex-fd-c flex-jc-c">
+      <section class="space__container flex flex-ai-c flex-jc-sb">
+        <div class="space__contents">
+          <div class="space-subtitle">
+            <h3>So, you want to travel to</h3>
+          </div>
+          <div class="space-title">
+            <h1>Space</h1>
+          </div>
+          <div class="space-content">
+            <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
+              outer space and not hover kind of on the edge of it. Well sit back, and relax 
+              because we’ll give you a truly out of this world experience!</p>
+          </div>
+        </div>
+        <a href="./index.html" class="space__explore flex flex-ai-c flex-jc-c" id="space__explore">
+          <div class="explore-hover" id="explore-hover"></div>
+          Explore
+        </a>
+      </section>
+    </main>
+  
+  </div>
+</body>
+</html>
