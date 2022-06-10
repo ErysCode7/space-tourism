@@ -24,10 +24,10 @@ Users should be able to:
 
 ### Screenshots
 
-![](screenshot/screenshot1.png)
-![](screenshot/screenshot2.png)
-![](screenshot/screenshot3.png)
-![](screenshot/screenshot4.png)
+![](screenshots/screenshot1.png)
+![](screenshots/screenshot2.png)
+![](screenshots/screenshot3.png)
+![](screenshots/screenshot4.png)
 
 ### Links
 
@@ -47,8 +47,8 @@ Users should be able to:
 - JavaScript
 
 ## Author
+- Facebook - [Erys Mozo](https://web.facebook.com/erys.mozo/)
+- Instagram - [_erysmozo](https://www.instagram.com/_erysmozo/)
+- Frontend Mentor - [ErysCode7](https://www.frontendmentor.io/profile/ErysCode7)
+- LinkedIn - [Erys Mozo](https://www.linkedin.com/in/erys-mozo-280190230/)
 
-- Frontend Mentor - [Krrish105](https://www.frontendmentor.io/profile/Krrish105)
-- Twitter - [_karishma10](https://twitter.com/_karishma10)
-- LinkedIn - [Karishma Garg](https://www.linkedin.com/in/karishma-garg-)
-- Codepen - [Krrish105](https://codepen.io/krrish105)
